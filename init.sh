@@ -13,9 +13,9 @@ sudo cp $HOME/.cargo/bin/pd /usr/local/bin/pd
 
 $HOME/.cargo/bin/pd network join --moniker $MONIKER --external-address $IP:26656 $COMETRPC
 
-#load snapshot (comment out to sync from genesis)
-SNAPSHOT=$(curl --proto '=https' --tlsv1.2 -LsSf https://polkachu.com/api/v2/chain_snapshots/penumbra | jq -r ".snapshot.url")
-curl --proto '=https' --tlsv1.2 -LsSf $SNAPSHOT | lz4 -c -d - | tar -x -C $HOME/.penumbra/network_data/node0
+# load snapshot (comment out to sync from genesis)
+# SNAPSHOT=$(curl --proto '=https' --tlsv1.2 -LsSf https://polkachu.com/api/v2/chain_snapshots/penumbra | jq -r ".snapshot.url")
+# curl --proto '=https' --tlsv1.2 -LsSf $SNAPSHOT | lz4 -c -d - | tar -x -C $HOME/.penumbra/network_data/node0
 
 curl --proto '=https' --tlsv1.2 -LsSf https://raw.githubusercontent.com/penumbra-zone/penumbra/main/deployments/scripts/install-cometbft > install-cometbft.sh
 sudo bash install-cometbft.sh
