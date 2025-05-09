@@ -7,4 +7,4 @@ If a DNS record points to the host, it will also automatically enable the HTTPS 
 
 Single line usage example:
 
-`curl --proto '=https' --tlsv1.2 -LsSf https://raw.githubusercontent.com/22a435/void-sh/main/init.sh | bash`
+`curl --proto '=https' --tlsv1.2 -LsSf https://raw.githubusercontent.com/chairulakmal/void-sh/main/init.sh | bash`
